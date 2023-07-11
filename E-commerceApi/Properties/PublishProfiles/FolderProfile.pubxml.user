@@ -7,4 +7,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <_PublishTargetUrl>C:\Users\kouak\Documents\PROJECTS\API\publish</_PublishTargetUrl>
     <History>True|2023-06-13T17:03:31.9163555Z;</History>
   </PropertyGroup>
+  <ItemGroup>
+    <File Include=".gitignore">
+      <publishTime>07/11/2023 11:08:07</publishTime>
+    </File>
+  </ItemGroup>
 </Project>
