@@ -1,0 +1,28 @@
+name:  publish 
+
+on :
+  workflow_dispatch:
+  push:
+    branches:
+     - main
+     
+jobs:
+  publish:
+   runs-on: ubuntu-latest
+   
+   steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup .Net
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '6.0.x'
+      
+    - name: Restore
+      run: dotnet build ./E-commerceApi.sln
+      
+    - name: Build 
+      run: dotnet build ./E-commerceApi.sln --configuration Release --no-restore
+      
+    - name: publish
+      run : dotnet publish ./E-commerceApi.sln  --configuration Release --no-build
